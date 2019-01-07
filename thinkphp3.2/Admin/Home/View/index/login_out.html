@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script type="text/javascript" src="/thinkphp3.2/Public/js/jquery.js"></script>
+	<script type="text/javascript" src="/thinkphp3.2/Public/js/bootstrap.js"></script>	
+	<link rel="stylesheet" href="/thinkphp3.2/Public/css/bootstrap.css"  type="text/css" />
+	<link rel="stylesheet" href="/thinkphp3.2/Public/css/bootstrap-responsive.css"  type="text/css" />
+	<title>Document</title>
+</head>
+<body>
+			<div class="container">
+			<p class="text-right">欢迎光临{$_COOKIE['name']}</p>
+			</div>
+			
+	<div class="container">
+			<ul class='nav nav-tabs'>
+					<volist name='shuzu' id='biaoti'>
+						<li class='active'>
+							<a href='{$biaoti.href}'>{$biaoti.admin}</a>
+						</li>
+					</volist>
+			</ul>	
+	</div>
+	
+	<div class='container-fluid'>
+		<div class='row-fluid'>
+			    <div class="span2">
+    					<ul class='nav nav-tabs nav-stacked'>
+    						<volist name='shuzu' id='biaoti'>
+    							<volist name="biaoti['index']" id='biaoti_fu'>
+		    						<li class='active'>
+		    							<a href="{$biaoti_fu.href}">
+		    								{$biaoti_fu.name}
+		    							</a>
+		    						</li>
+	    						</volist>
+    						</volist>
+    					</ul>
+   				</div>
+   				<div class="span10">
+  
+   			    </div>
+		</div>	
+	</div>
+	
+</body>
+</html>
